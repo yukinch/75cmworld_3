@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="logo">PHOTO GALLERY</div>
+    <nav class="nav">
+      <a href="#about">about</a>
+      <a href="#gallery">gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- メインビジュアル -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>75cmの世界</h1>
+      </div>
+    </section>
+
+    <!-- About セクション -->
+    <section id="about" class="about-section">
+      <div class="container about-container">
+        <div class="about-image">
+          <img src="https://picsum.photos/id/64/600/400" alt="about-image">
+        </div>
+        <div class="about-text">
+          <h2>about</h2>
+          <p>このサイトについて</p>
+          <p>写真を撮ることが好きなフォトグラファーのポートフォリオサイトです。日常の風景や旅行先での感動的な瞬間を収めたギャラリーを掲載しています。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery セクション -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <h2 class="section-title">gallery</h2>
+        <div class="gallery-grid">
+          
+          <!-- 写真アイテム 1 -->
+          <div class="gallery-item" 
+               data-title="静寂の森" 
+               data-image="https://picsum.photos/id/10/800/800" 
+               data-desc="撮影背景: 朝もやが立ち込める長野の深林にて。<br>撮影意図: 静けさと自然の力強さを表現するために、朝の光が木々を差し込む瞬間を捉えました。">
+            <div class="image-wrapper">
+              <img src="https://picsum.photos/id/10/600/600" alt="静寂の森">
+            </div>
+            <p class="photo-title">静寂の森</p>
+          </div>
+
+          <!-- 写真アイテム 2 -->
+          <div class="gallery-item" 
+               data-title="海辺の夕焼け" 
+               data-image="https://picsum.photos/id/1001/800/800" 
+               data-desc="撮影背景: 湘南海岸のサンセットタイム。<br>撮影意図: グラデーションが美しい空と波の反射をハイコントラストで捉え、どこかノスタルジックな雰囲気を演出しました。">
+            <div class="image-wrapper">
+              <img src="https://picsum.photos/id/1001/600/600" alt="海辺の夕焼け">
+            </div>
+            <p class="photo-title">海辺の夕焼け</p>
+          </div>
+
+          <!-- 写真アイテム 3 -->
+          <div class="gallery-item" 
+               data-title="都市の幾何学" 
+               data-image="https://picsum.photos/id/1031/800/800" 
+               data-desc="撮影背景: 都心の高層ビル群を見上げる路地裏。<br>撮影意図: 近代建築が作り出す直線と影の美しい構図に注目し、モノトーン寄りの色彩で無機質な美を表現しました。">
+            <div class="image-wrapper">
+              <img src="https://picsum.photos/id/1031/600/600" alt="都市の幾何学">
+            </div>
+            <p class="photo-title">都市の幾何学</p>
+          </div>
+
+          <!-- 写真アイテム 4 -->
+          <div class="gallery-item" 
+               data-title="雪原の一本道" 
+               data-image="https://picsum.photos/id/1036/800/800" 
+               data-desc="撮影背景: 真冬の北海道・美瑛町。<br>撮影意図: 見渡す限りの銀世界の中に佇む一本の道を描くことで、孤独感と果てしない広がりを対比させました。">
+            <div class="image-wrapper">
+              <img src="https://picsum.photos/id/1036/600/600" alt="雪原の一本道">
+            </div>
+            <p class="photo-title">雪原の一本道</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Photo Gallery Portfolio All Rights Reserved.</p>
+  </footer>
+
+  <!-- モーダル（Lightbox & 写真詳細機能） -->
+  <div id="lightbox-modal" class="modal">
+    <span class="modal-close">&times;</span>
+    <div class="modal-content">
+      <h3 id="modal-title" class="modal-title"></h3>
+      <div class="modal-image-wrapper">
+        <img id="modal-img" src="" alt="">
+      </div>
+      <p id="modal-desc" class="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
